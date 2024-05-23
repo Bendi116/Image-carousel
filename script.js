@@ -18,13 +18,12 @@ function initBtn(){
 }
 
 function actionBtn(e){
-    console.log(e)
-    for (let index = 0; index < frameIndex.length; index++) {
-        console.log(btnList)
-        if(btnList[index]===e.target){
+    console.log(e.target)
+    for (let index = 0; index < frameList.length; index++) {
+        console.log(Array.from(btnParentList.children)[index])
+        if(Array.from(btnParentList.children)[index]===e.target){
             frameIndex=index
         }
-        
     }
     setSliderFrame()
 
@@ -90,7 +89,6 @@ const setSliderFrame = () => {
         e.style.backgroundColor=""
     })
     a[frameIndex].style.backgroundColor="lightslategrey"
-    console.log(a[2].style.backgroundColor)
     //btnParentList.children[frameIndex].style.backgroundColor="grey"
 }
 
