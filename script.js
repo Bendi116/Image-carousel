@@ -47,7 +47,7 @@ rightBtn.addEventListener("click",()=>{
     }
     setSliderFrame()
 })
-const colorList = ["red","orange","purple","green","yellow","blue","viola"]
+const colorList = ["red","orange","purple","green","yellow","blue","violet"]
 const frameList = []
 const currInd = []
 const btnList = []
@@ -99,6 +99,11 @@ let frameIndex= 3
 initFrameList(7)
 initBtn()
 setSliderFrame()
+setInterval(()=>{
+    frameIndex++
+    if(frameIndex>6)frameIndex=0
+    setSliderFrame()
+},1000)
 
 
 
